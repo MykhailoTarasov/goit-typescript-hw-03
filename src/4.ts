@@ -8,7 +8,6 @@ class Key {
   
   class Person {
     constructor(private key: Key) {
-      
     }
   
     getKey(): Key {
@@ -20,8 +19,7 @@ class Key {
     protected door: boolean = false;
     protected tenants: Person[] = [];
   
-    constructor(private key: Key) {
-    }
+    constructor(protected key: Key) {}
   
     comeIn(person: Person): void {
       if (this.door) {
