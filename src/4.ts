@@ -8,7 +8,7 @@ class Key {
   
   class Person {
     constructor(private key: Key) {
-      this.key = key;
+      
     }
   
     getKey(): Key {
@@ -17,13 +17,10 @@ class Key {
   }
   
   abstract class House {
-    door: boolean = false;
-    key: Key;
-    tenants: Person[] = [];
+    protected door: boolean = false;
+    protected tenants: Person[] = [];
   
-    constructor(door: boolean, key: Key) {
-      this.door = door;
-      this.key = key;
+    constructor(private key: Key) {
     }
   
     comeIn(person: Person): void {
